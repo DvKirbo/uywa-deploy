@@ -1,22 +1,20 @@
 // src/MapComponent.jsx
 import React from 'react';
+import { Box } from '@mui/material';
 import { MapContainer } from 'react-leaflet/MapContainer';
 import { TileLayer } from 'react-leaflet/TileLayer';
-import { useMap } from 'react-leaflet/hooks';
+//import { useMap } from 'react-leaflet/hooks';
 import { Marker } from 'react-leaflet/Marker';
 import { Popup } from 'react-leaflet/Popup';
-import axios from 'axios';
-import { useEffect, useState } from 'react';
 import 'leaflet/dist/leaflet.css';
 import '../App.css';
-
-
-
-const VerAlerta = () => {
+const Maps = () => {
     return (
-      <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+    <Box sx={{marginTop:9}}>
+            <MapContainer center={[-12.0464, -77.0428]} zoom={13} scrollWheelZoom={false}>
   <TileLayer
     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    
     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
   />
   <Marker position={[51.505, -0.09]}>
@@ -24,7 +22,8 @@ const VerAlerta = () => {
       A pretty CSS3 popup. <br /> Easily customizable.
     </Popup>
   </Marker>
-</MapContainer>     
+</MapContainer>
+        </Box>
    );
 }
-export default VerAlerta;
+export default Maps;
