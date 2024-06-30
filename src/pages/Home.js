@@ -2,8 +2,8 @@ import '../App.css';
 import React from "react";
 import Box from '@mui/material/Box';
 import Carrusel from "../components/Carrusel/Carousel";
-import Card1 from '../components/Cards/Tabla1';
-import Card2 from '../components/Cards/Tabla2';
+import Card1 from '../components/cards/Tabla1';
+import Card2 from '../components/cards/Tabla2';
 
 function Home() {
     return (
